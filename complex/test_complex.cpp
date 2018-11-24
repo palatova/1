@@ -51,9 +51,6 @@ bool testoparsirovanie(const std::string& str)
 	return istrm.good();
 }
 
-
-
-
 int main(){
 	testoparsirovanie("{8,8.9}");
 	testoparsirovanie("{8,f}");
