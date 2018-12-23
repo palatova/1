@@ -19,7 +19,7 @@ public:
 	///метод swap
 	void resize(DynArray& arr, const int newsize);
 
-	std::ostream& operator<<(std::ostream& lhs, DynArray& rhs);
+	//std::ostream& operator<<(std::ostream& lhs, DynArray& rhs);
 
 private:
 	int* data_;

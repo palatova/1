@@ -18,7 +18,7 @@ DynArray::DynArray(const int Size) {
 //метод swap - меняет 2 конструктора копирования, если выбрасывается ошибка
 
 int& DynArray::operator [](int n) {
-	if (n < size) {
+	if (n < data_.size) {
 		return *(data_ + n);
 	}
 	else {
@@ -64,7 +64,7 @@ DynArray::~DynArray() {
 }
 */
 DynArray& size(DynArray& arr) {
-	return arr.p_size;
+	return arr.p_size_;
 };
 
 
@@ -77,7 +77,7 @@ void resize(DynArray& arr, const int newsize)
 			int* p_DAR = new int[newsize];
 			for (int i = 0; i < arr.size; i++)
 			{
-				p_DAR[i] = arr.data_[i];
+				p_DAR[i] = data_[i];
 			}
 			//заполняем значениями старого массива часть нового массива
 			for (int i = arr.size; i < newsize; i++)
